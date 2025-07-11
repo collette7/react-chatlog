@@ -3,8 +3,10 @@ import TimeStamp from './TimeStamp';
 import PropTypes from 'prop-types';
 
 const ChatEntry = ({ sender, body, timeStamp, liked, onLike }) => {
+  const isLocal = sender === 'Estragon';
+  
   return (
-    <div className="chat-entry local">
+    <div className={`chat-entry ${isLocal ? 'local' : 'remote'}`}>
       <h2 className="entry-name">{sender}</h2>
       <section className="entry-bubble">
         <p>{body}</p>
