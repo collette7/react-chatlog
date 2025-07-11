@@ -11,7 +11,7 @@ const App = () => {
   };
 
   const toggleLike = (id) => {
-    setEntries(entries.map(entry => 
+    setEntries(entries.map(entry =>
       entry.id === id ? { ...entry, liked: !entry.liked } : entry
     ));
   };
